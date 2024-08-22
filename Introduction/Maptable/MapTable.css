@@ -1,0 +1,27 @@
+table, th, td{
+    border:1px solid black;
+    border-collapse: collapse;
+    padding: 10px 30px;
+}
+
+table,th{
+    text-align: center;
+}
+
+td{
+    text-align:left ;
+}
+
+h2{
+    padding: 0px 0px 0px 500px;
+}
+
+img{
+    height: 500px;
+    width: 600px;
+}
+
+.colour{
+    color:blue;
+
+}

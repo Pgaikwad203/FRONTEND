@@ -1,0 +1,39 @@
+.container{
+    border: 5px dotted gray;
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+    
+}
+.header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1{
+    background-color: lightgrey;
+    padding: 20px ;
+}
+
+img{
+    width: 100%;
+}
+
+h2{
+    padding: 10px;
+}
+
+p{
+    padding: 5px;
+}
+
+.red{
+    color: red;
+}
+
+.footer{
+    background-color: lightgrey;
+    margin: 0;
+    padding: 10px 0;
+
+}

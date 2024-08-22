@@ -1,0 +1,26 @@
+.red{
+   background-color: rgb(246, 135, 135);
+   border-left: 10px solid red;
+   padding: 30px 10px;
+}
+
+.green{
+    background-color:rgb(157, 249, 157);
+    border-left: 10px solid green;
+    padding: 30px 10px;
+
+}
+
+.blue{
+    background-color: rgb(194, 194, 242);
+    border-left: 10px solid blue;
+    padding: 30px 10px;
+
+}
+
+.yellow{
+    background-color: rgb(241, 241, 180);
+    border-left: 10px solid yellow;
+    padding: 30px 10px;
+
+}

@@ -1,0 +1,35 @@
+body {
+    background-image: url('/Introduction/BackgroundImage/istockphoto.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 0px 325px;
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    font-size: 13px;
+    color: white;
+}
+
+.ABC {
+    height: 50px;
+    width: 400px;
+}
+
+.cd {
+    color: white;
+    background-color: green;
+    padding: 7px 25px;
+}
+
+.ok {
+    float: right;
+    background-color: black;
+    color: white;
+    height: 340px;
+    width: 400px;
+}

@@ -1,0 +1,22 @@
+table, th, td {
+    border:1px solid black;
+    text-align: center;
+    height: 50px;
+    width: 1000px;
+}
+
+th{
+    font-size: large;
+}
+
+td{
+    text-align: left;
+}
+
+.ABC{
+ background-color: yellow;  
+}
+
+.DEF{
+ background-color: rgb(24, 154, 154);
+}

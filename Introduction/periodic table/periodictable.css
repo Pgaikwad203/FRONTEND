@@ -1,0 +1,40 @@
+tr,table, th{ 
+    border-collapse: collapse; 
+    text-align: center;
+    padding: 10px 30px;
+
+}
+
+th{
+    border:3px solid red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.orange{
+    background-color: orange;
+}
+ .light{
+    background-color: lightsalmon;
+ }
+
+.purple{
+    background-color: purple;
+}
+.blue{
+    background-color:lightblue;
+}
+.skyblue{
+    background-color: skyblue;
+}
+.green{
+    background-color: yellowgreen;
+}
+.dark{
+    background-color: darkgoldenrod;
+}
+.white{
+    background-color:lightgray;
+}

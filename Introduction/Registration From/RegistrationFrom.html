@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Document</title>
+   <link rel="stylesheet" href="RegistrationFrom.css">
+</head>
+
+<body>
+   <h1 class="text">Registration From</h1>
+   <table>
+      <tr>
+         <th><label for="fname">Enter your first name</label></th>
+         <td><input type="text" value=" enter your first name"></td>
+      </tr>
+
+      <tr>
+         <th>Enter your last name</th>
+         <td><input type="text"></td>
+      </tr>
+
+      <tr>
+         <th>Enter your password </th>
+         <td><input type="text"></td>
+      </tr>
+
+      <tr>
+         <th>ReEnter your password</th>
+         <td><input type="text"></td>
+      </tr>
+
+      <tr>
+         <th>Enter your email</th>
+         <td><input type="text" ></td>
+      </tr>
+
+      <tr>
+         <th>Enter your mobile</th>
+         <td><input type="text"></td>
+      </tr>
+
+      <tr>
+         <th>Enter your address</th>
+         <td><textarea type="text" rows="10"  cols="25" > </textarea></td>
+      </tr>
+
+      <tr>
+         <th>select your gender</th>
+         <td>
+            <input type="radio" id="Male" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" value="Female">
+            <label for="Female">Female</label><br>
+
+
+         </td>
+      </tr>
+
+      <tr>
+         <th>Select your hobbies</th>
+         <td>
+            <input type="radio" id="hobby 1" value="hobby 1">
+            <label for="hobby 1">hobby 1</label>
+            <input type="radio" id="hobby 2" value="hobby 2">
+            <label for="Fhobby 2">hobby 2</label>
+            <input type="radio" id="hobby 3" value="hobby 3">
+            <label for="hobby 3">hobby 3</label>
+         </td>
+      </tr>
+
+      <tr>
+         <th>Select your DOB</th>
+         <td><input type="date" id="date"></td>
+      </tr>
+
+      <tr>
+         <th>select your country</th>
+         <td>
+            <select id="country" name="country">
+               <option value="country">select your country</option>
+               <option value="India">India</option>
+               <option value="Afghanistan">Afghanistan</option>
+               <option value="Bangladesh">Bangladesh</option>
+               <option value="Japan">Japan</option>
+            </select>
+
+         </td>
+      </tr>
+
+      <tr>
+         <th>Upload your pic</th>
+         <td>
+            <label for="myfile"></label>
+            <input type="file" id="myfile" name="myfile">
+         </td>
+      </tr>
+
+      <tr>
+         <td colspan="2">
+            <input type="button" onclick="SaveMyData" value="Save My Data" class="space">
+            <input type="button" onclick="Resetdata" value="Rest data">
+      </tr>
+   </table>
+
+</body>
+
+</html>

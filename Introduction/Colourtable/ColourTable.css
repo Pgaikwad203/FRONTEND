@@ -1,0 +1,24 @@
+table, th, td {
+    border:3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 50px;
+
+  }
+  
+  .a{
+     background-color: rgb(199, 175, 129);
+  }
+
+  .b{
+    background-color: greenyellow;
+  }
+
+  .c{
+    background-color: orchid;
+  }
+
+  .d{
+    background-color: darkgray;
+  }

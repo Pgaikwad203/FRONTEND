@@ -1,0 +1,20 @@
+
+th,td,table{
+    border: 5px ridge gray;
+    border-collapse: collapse;
+    text-align: left; 
+    background-color: lightgray;
+    width: 750px; height: 40px;
+}
+
+th{
+    text-align: center;
+}
+
+.text{
+    padding: 0px 200px;
+}
+
+.space{
+    margin: 0px 0px 0px 200px;
+}
