@@ -2,69 +2,127 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
     <style>
-        div {
-            float: left;
-            padding: 15px;
-            box-shadow: 5px 5px 5px  lightblue;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: skyblue;
         }
 
-        img {
-            height: 200px;
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             width: 400px;
+            height: 500px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .technology {
+            background-color: #66b2ff;
+        }
+
+        .food {
+            background-color: #ffd966;
+        }
+
+        .automobile {
+            background-color: #ff6666;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #555;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <div>
-            <img src="/Introduction/Cards/image1.jpg"><br><br>
-
-            <input class="button" type="submit" value="Technoology">
-
-            <h1>Whats New In 2024 Tech</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur <br>
-                adipisicing elit.Lorem ipsum dolor sit, <br>
-                amet consectetur adipisicing elit<br>
-            </p>
-
-
+    <div class="card-container">
+        <div class="card">
+            <img src="image1.jpg" alt="Tech Image">
+            <div class="card-content">
+                <span class="tag technology">Technology</span>
+                <h3>Whats New In 2024 Tech</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <div class="card-footer">
+                    <div>Asheel Ahmed Siddqui</div>
+                    <div>Today</div>
+                </div>
+            </div>
         </div>
-
-        <div>
-            <img src="/Introduction/Cards/burger.jfif"><br><br>
-
-            <input class="button" type="submit" value="Food">
-
-            <h1>Delicious Food</h1>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur <br>
-                adipisicing elit.Lorem ipsum dolor sit, <br>
-                amet consectetur adipisicing elit<br>
-            </p>
-
-
+        <div class="card">
+            <img src="burger.jfif" alt="Food Image">
+            <div class="card-content">
+                <span class="tag food">Food</span>
+                <h3>Delicious Food</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <div class="card-footer">
+                    <div>Hassan Raza</div>
+                    <div>2 Days Ago</div>
+                </div>
+            </div>
         </div>
-
-        <div>
-            <img src="/Introduction/Cards/automobile.jfif"><br><br>
-
-            <input class="button" type="submit" value="automobile">
-
-            <h1>Race To Heart Conten</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur <br>
-                adipisicing elit.Lorem ipsum dolor sit, <br>
-                amet consectetur adipisicing elit<br>
-            </p>
-
-
+        <div class="card">
+            <img src="automobile.jfif" alt="Automobile Image">
+            <div class="card-content">
+                <span class="tag automobile">Automobile</span>
+                <h3>Race To Heart Content</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <div class="card-footer">
+                    <div>Abdul Moiz</div>
+                    <div>Yesterday</div>
+                </div>
+            </div>
         </div>
-
     </div>
 </body>
 
