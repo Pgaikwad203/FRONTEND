@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .color {
+            color: tomato;
+        }
+
+        .div1 {
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <p>I am the first p</p>
+
+            <div class='container'>
+                <p class="color">I am the second p</p>
+
+                <div>
+                    <p class="color">I am the third p</p>
+                </div>
+            </div>
+
+            <p>I am the last p</p>
+        </div>
+
+        <div class="card">
+            <p>I am the first p</p>
+
+            <div class='container'>
+                <p>I am the second p</p>
+
+                <div>
+                    <p class="color">I am the third p</p>
+                </div>
+            </div>
+
+            <p>I am the last p</p>
+        </div>
+
+        <div class="card">
+            <p>I am the first p</p>
+
+            <div class='container'>
+                <p>I am the second p</p>
+
+                <div>
+                    <p>I am the third p</p>
+                </div>
+            </div>
+
+            <p class="color">I am the last p</p>
+            <p>I am the very last p</p>
+        </div>
+
+        <div class="card" class="div1">
+            <p>I am the first p</p>
+
+            <div class='container'>
+                <p class="color">I am the second p</p>
+
+                <div>
+                    <p>I am the third p</p>
+                </div>
+            </div>
+
+            <p>I am the last p</p>
+
+        </div>
+
+        <div class="card">
+            <p>I am the first p</p>
+
+            <div class='container'>
+                <p>I am the second p</p>
+
+                <div>
+                    <p>I am the third p</p>
+                </div>
+            </div>
+
+            <p class="color">I am the last p</p>
+            <p class="color">I am the very last p</p>
+        </div>
+    </div>
+</body>
+
+</html>
