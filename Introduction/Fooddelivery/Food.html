@@ -21,17 +21,19 @@
 
         .container4 {
             display: flex;
-            align-items: center;
             background-image: url('./frame4.jpg');
             background-size: cover;
-            width: 1500px;
-            height: 800px;
-            margin: auto;
+            width: 1300px;
+            height: 650px;
+            padding: 0px 100px;
         }
-        .about {
-            width: 50%;
-            text-align: justify;
+
+        .container5 {
+            display: flex;
+            padding: 0px 60px;
+            text-align: center;
         }
+
 
         a {
             text-decoration: none;
@@ -71,6 +73,7 @@
 
         .div4 {
             font-size: 30px;
+            line-height: 50px;
         }
 
         .div5 {
@@ -82,8 +85,151 @@
             border-radius: 5px;
         }
 
-        .set{
+        .set {
             padding-top: 0px 100px;
+        }
+
+        .set1 {
+            font-size: 60px;
+            margin-left: 100px;
+        }
+
+        .set2 {
+            font-size: 25px;
+            margin-left: 100px;
+            line-height: 40px;
+        }
+
+        .set3 {
+            font-size: 20px;
+            background-color: tomato;
+            border-color: tomato;
+            padding: 10px 30px;
+            color: white;
+            border-radius: 5px;
+            margin-left: 100px;
+        }
+
+        .get {
+            font-size: 50px;
+            text-align: center;
+
+        }
+
+        .get1 {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 15px;
+            margin: 0px 80px;
+        }
+
+        .card {
+            background-color: rgb(252, 251, 251);
+            border-radius: 40px;
+            box-shadow: 5px 5px 8px 4px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            width: 1400px;
+            height: 650px;
+            text-align: left;
+
+        }
+
+        .card img {
+            margin: 20px 0px 0px 60px;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h1 {
+            padding-left: 50px;
+        }
+
+        .card p {
+            font-size: 20px;
+            line-height: 30px;
+            padding-left: 50px;
+        }
+
+        .fast {
+            margin-left: 70px;
+        }
+
+        .fast1 {
+            margin-left: 110px;
+        }
+
+        .you {
+            background-color: rgb(252, 251, 251);
+            border-radius: 30px;
+            box-shadow: 5px 5px 8px 4px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            width: 1200px;
+            height: 250px;
+            display: flex;
+            margin-left: 150px;
+        }
+
+        .you1 {
+            margin: 70px 0px 0px 150px;
+            text-align: center;
+
+        }
+
+        .you2 {
+            margin: 70px 0px 0px 250px;
+            text-align: center;
+
+        }
+
+        .you3 {
+            text-align: center;
+            margin: 70px 0px 0px 300px;
+        }
+
+        .you h1 {
+            font-size: 40px;
+        }
+
+        .last{
+            background-color: rgb(35,35,35);
+            text-align: center;
+            padding: 5px  50px 70px 50px;
+            display: flex;
+            clear: right;
+        }
+
+        .last p{
+            color: white;
+            font-size: 20px;
+        }
+
+        .last h1{
+            font-size: 30px;
+        }
+
+
+        .last2{
+        color: tomato;
+        margin-left: 520px;
+        }
+
+        .last3{
+            color: #666766;
+            margin-left:20px;
+        }
+
+        .last4{
+            margin: 80px 0px 0px -390px;
         }
     </style>
 </head>
@@ -121,7 +267,7 @@
     <div class="container2">
         <div>
             <div class="container3">
-                <img src="/Introduction/Fooddelivery/burger.jpg" height="800px" width="500px">
+                <img src="/Introduction/Fooddelivery/burger.jpg" height="700px" width="600px">
             </div>
         </div>
         <div class="div2">
@@ -130,9 +276,8 @@
             </h1>
         </div>
         <div class="div4">
-            <p>A hamburger (also burger for short) is a food,<br> typically considered a sandwich, consisting of one
-                or <br>more cooked patties
-                of ground meat, usually beef,<br> placed inside a sliced bread roll or bun.</p>
+            <p>A hamburger (also burger for short) is a food, typically considered a sandwich, consisting of one
+                or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.</p>
         </div>
     </div>
 
@@ -141,16 +286,186 @@
     </div>
 
     <div class="container4">
-        <div class="set">
-            <img src="/Introduction/Fooddelivery/about-team.png">
+        <div>
+            <img src="/Introduction/Fooddelivery/about-team.png" class="set">
         </div>
-        <div class="about">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga perspiciatis dicta repellat minus quibusdam, eius quo tenetur suscipit a excepturi alias possimus fugiat nulla accusamus unde amet minima sint nesciunt aliquam. Deleniti odit maxime aspernatur quod tempora. Numquam ad deleniti ullam unde sit, totam consequuntur, enim possimus dicta sint ea!</p>
+        <div>
+            <h1 class="set1">About Us</h1>
+            <p class="set2">Teamwork is working together of people to achieve a <br>
+                certain goal. Teamwork is the basic need for an <br>
+                organization to function. Furthermore, every organization<br>
+                has a division of several teams to perform specific tasks.<br>
+                Without teamwork nothing is possible. So, we are doing <br>
+                team work over 2years and giving more facilities in our<br>
+                Hamburger Shop.</p>
+            <br>
+            <br>
+            <br>
+
+            <button class="set3">Contact Us</button>
+
         </div>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <h1 class="get">Our Recipies</h1>
+        <p class="get1">Simply sharing a table or insights about one another's food culture helps,<br>
+            unmask our common humanity. The universal language of food is a unifying <br>
+            force</p>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="/Introduction/Fooddelivery/burger-recipie0-min.jpg">
+            <div class="card-content">
+                <h1>Veggie Burgers</h1>
+                <p>A veggie burger is a burger 
+                    patty that does not contain 
+                    meat. These burgers may be 
+                    made from ingredients like 
+                    beans, especially soybeans and 
+                    tofu, nuts, grains, seeds or fungi
+                    such as mushrooms or
+                    mycoprotein</p>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="card">
+            <img src="/Introduction/Fooddelivery/burger-recipie1-min.jpg">
+            <div class="card-content">
+                <h1>Beef Burgers</h1>
+                <p>These stacked beef burgers are 
+                    a BBQ favourite & are really
+                    easy-to-make. Find this
+                    homemade burger recipe &
+                    loads more BBQ recipes at Tesco
+                    Real Food</p>
+
+            </div>
+
+
+        </div>
+
+        <div class="card">
+            <img src="/Introduction/Fooddelivery/Screenshot 2024-09-10 121142.png">
+            <div class="card-content">
+                <h1>Turkey Burgers</h1>
+                <p>Turkey burgers are much leaner 
+                    than hamburgers, but they can 
+                    be dry and dull Moisten them by 
+                    adding ketchup and a bit of
+                    grated onion to the ground 
+                    turkey •</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <h1 class="get">Your Food Delivery partner</h1>
+        <p class="get1">Deliver is a fast growing and promising courier and parcel service in <br>
+            Bangladesh. With excellent customer service.</p>
+    </div>
+
+    <div class="container5">
+        <div>
+            <img src="/Introduction/Fooddelivery/easy-order.jpg" height="400px" width="400px">
+            <h1>Easy To Order</h1>
+
+        </div>
+
+        <div class="fast">
+            <img src="/Introduction/Fooddelivery/fdelivery.jpg" height="400px" width="400px">
+            <h1>Fastest Delivery</h1>
+
+        </div>
+
+        <div class="fast1">
+            <img src="/Introduction/Fooddelivery/quality.jpg" height="400px" width="400px">
+            <h1>Best quality</h1>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="you">
+        <div class="you1">
+            <h1>700K</h1>
+            <p>Youtube Subscriber</p>
+
+        </div>
+
+        <div class="you2">
+            <h1>2.4M</h1>
+            <p>Instagram Followers</p>
+
+        </div>
+
+        <div class="you3">
+            <h1>100K</h1>
+            <p>Dribbble Shot Likes</p>
+
+        </div>
+
+    </div>
 
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="last">
+    <div class="last">
+    <div>
+    <h1 class="last2">Hamburger</h1>
+    </div>
+    
+    <div>
+        <h1 class="last3">World</h1>
+    </div>
+
+    </div>
+
+    <p class="last4">Eat healthy to live healthy.Live healthy to live happy</p>
+</footer>
 
 </html>
