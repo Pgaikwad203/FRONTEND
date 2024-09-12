@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightcyan;
+        }
+
+        .animated-text{
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: whitesmoke;
+            padding: 0px 20px;
+            height: 60px;
+            overflow: hidden;
+            box-shadow: 5px 5px 8px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .line{
+            text-align: center;
+            font-size: 20px;
+            padding-top: 20px;
+            transform: translate(0%);
+            animation: anim 8s linear infinite ;
+        }
+
+        @keyframes anim{
+            from {
+        transform: translateX(100%); 
+      }
+      to {
+        transform: translateX(-100%); 
+      }
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="animated-text">
+            <div class="line">
+                This text is scrolling from left to right inside a div container
+            </div>
+    </div>
+
+</body>
+
+</html>
