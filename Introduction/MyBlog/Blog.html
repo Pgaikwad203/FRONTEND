@@ -22,7 +22,7 @@
             box-shadow: 5px 5px 8px 4px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             width: 950px;
-            height: 700px;
+            height: 650px;
             text-align: left;
             float: left;
             margin-bottom: 50px;
@@ -75,10 +75,11 @@
             box-shadow: 5px 5px 8px 4px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             width: 950px;
-            height: 620px;
+            height: 670px;
             text-align: left;
             float: left;
             margin-left: 15px;
+            margin-bottom: 80px;
         }
 
         .card3 img {
@@ -168,11 +169,16 @@
 
         .button{
             padding: 10px 20px;
-            margin: 20px 0px 0px 15px;
+            margin: 20px 0px 0px -950px;
             color: white;
             background-color: rgb(66, 64, 64, 1);
             font-size: 17px;
         }
+
+        .button[disabled] {
+            cursor: not-allowed;
+        }
+
 
         .button2{
             padding: 10px 20px;
@@ -202,6 +208,21 @@
             color: white;
             padding: 0px 5px 5px 5px;
         }
+
+        .color2{
+            background-color: black;
+            color: white;
+            padding: 0px 5px 5px 5px;
+            margin-left: 25px;
+        }
+
+        .color3{
+            background-color: black;
+            color: white;
+            padding: 0px 5px 0px 5px;
+            margin-left: 25px;
+            border-radius: 50px;
+        }
     </style>
 </head>
 
@@ -214,7 +235,7 @@
     <div class="card">
         <img src="/Introduction/MyBlog/Screenshot 2024-09-12 122926.png">
         <h1>TITLE HEADING</h1>
-        <P>Title description, April 7. 2014</P><br>
+        <P>Title description, April 7. 2014</P>
         <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl Sed mattis nunc id lorem euismod placerat
             Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
             corper.
@@ -224,7 +245,7 @@
         <button class="button3">
             READ MORE <i class="fa-solid fa-angles-right"></i>
         </button>
-        <p class="new2">Comments<span class="color">0</span></p>
+        <p class="new2">Comments<span class="color2">0</span></p>
 
     </div>
 
@@ -239,6 +260,7 @@
     <div class="card3">
         <img src="/Introduction/MyBlog/Screenshot 2024-09-12 123042.png">
         <h1>BLOG ENTRY</h1>
+        <P>Title description, April 2. 2014</P>
         <p>Mauris neque quam fermentum ut nisl vitae, convallis maximus nist Sed mattis nunc id lorem euismod placerat.
             Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
             corper
@@ -248,7 +270,7 @@
         <button class="button3">
             READ MORE <i class="fa-solid fa-angles-right"></i>
         </button>
-        <p class="new2">Comments<span class="color">2</span></p>
+        <p class="new2">Comments<span class="color3">2</span></p>
 
     </div>
 
@@ -317,7 +339,7 @@
 
 <footer>
     <div>
-    <button class="button">Previous</button>
+    <button type="button" disabled class="button" title="This button is disabled">Previous</button>
     <button class="button2">
         Next <i class="fa-solid fa-angles-right"></i>
     </button>
