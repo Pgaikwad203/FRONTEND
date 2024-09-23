@@ -3,6 +3,13 @@ body {
     margin: 0;
 }
 
+body p{
+    background: linear-gradient(rgb(255, 173, 114), rgb(246, 46, 113));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
 .container {
     position: fixed;
     height: 100px;
@@ -30,6 +37,13 @@ body {
     margin-top: 35px;
 }
 
+.container a:hover{
+        background: linear-gradient(rgb(255, 173, 114), rgb(246, 46, 113));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+}
+
 .container2 {
     background-image: url(header-bg.jpg);
     background-size: cover;
@@ -39,7 +53,7 @@ body {
 
 .container2 h1 {
     padding: 20% 15% 20% 15%;
-    background-image: linear-gradient(rgb(255, 173, 114, 0.5), rgb(246, 46, 113, 0.5));
+    background-image: linear-gradient(rgb(255, 173, 114, 0.8), rgb(246, 46, 113, 0.8));
     color: whitesmoke;
     font-size: 100px;
     height: 93px;
@@ -54,6 +68,15 @@ body {
     background-color: white;
     padding: 15px;
     border-radius: 50px;
+}
+
+.container2 h1 a:hover{
+    font-size: 15px;
+        color: white;
+        text-decoration: none;
+        background-color:black;
+        padding: 15px;
+        border-radius: 50px;
 }
 
 .container3 {
@@ -80,7 +103,7 @@ body {
     margin-left: 50px;
 }
 
-.container4 image {
+.container4 img {
     display: block;
     width: 100%;
     height: auto;
@@ -130,7 +153,10 @@ body {
 
 .container5 h2 {
     font-size: 40px;
-    color: #777777;
+    background: linear-gradient(rgb(255, 173, 114), rgb(246, 46, 113));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding-left: 80px;
     padding-top: 80px;
 }
@@ -152,6 +178,11 @@ body {
     font-size: 15px;
 }
 
+.container5 a:hover{
+    color:black;
+    background-color: white;
+}
+
 .container6 {
     display: flex;
     margin-left: 80px;
@@ -167,6 +198,13 @@ body {
     color: #777777;
 }
 
+.container6 i:hover{
+    background: linear-gradient(rgb(255, 173, 114), rgb(246, 46, 113));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
 .container6 p {
     font-size: large;
     color: #777777;
@@ -175,14 +213,19 @@ body {
 .second2 {
     display: flex;
     margin-top: 150px;
+    padding: 0;
+    margin: 0;
 }
 
 .container7 {
     position: relative;
+    margin-top: 150px;
 }
 
-.container7 image {
+.container7 img {
     display: block;
+    height: auto;
+    width: 100%;
 }
 
 .overlay2 {
@@ -193,18 +236,19 @@ body {
     background-image: linear-gradient(#f9ab72, #f62e71);
     opacity: 0.8;
     overflow: hidden;
-    width: 100;
+    width: 100%;
     height: 0;
     transition: .5s ease;
 }
 
-.container7:hover .overlay {
-    
+.container7:hover .overlay2 {
+    height: 100%;
 }
 
 .how2 {
     color: white;
-    font-size: 20px;
+    font-size:20px;
+    font-weight: 500;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -370,6 +414,13 @@ body {
      margin-right: 15px;
      margin-top: 5px;
      color: white;
+ }
+
+ .container10 i:hover {
+     background: linear-gradient(rgb(255, 173, 114), rgb(246, 46, 113));
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
  }
 
  .put{
