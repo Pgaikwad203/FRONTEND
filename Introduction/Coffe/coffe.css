@@ -1,0 +1,141 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+.coin1 {
+    background-image: url(Cafe3.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+    position: relative;
+}
+
+.coin1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to left, #a07070, #bc8b8b, #8e4242, #a28f8f, #513434);
+}
+
+.coinbase1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.coinbase1 img {
+    padding-left: 20px;
+}
+
+.coinbase1 a {
+    text-decoration: none;
+    color: black;
+    padding-right: 70px;
+    color: whitesmoke;
+}
+
+.coinbase2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 20px;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 700px;
+    color: white;
+    padding-top: 100px;
+}
+
+.coinbase2 h1 {
+    font-size: 50px;
+}
+
+.coinbase2 h2 {
+    font-size: 30px;
+}
+
+.coinbase3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+}
+
+.coinbase3 img {
+    animation: arrowMove 2s infinite;
+}
+
+@keyframes arrowMove {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.coin2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 70px;
+}
+
+.coin2base1{
+    text-align: center;
+    padding: 50px 40px;
+}
+
+.coin2 h1 {
+    color: #bd1220;
+    font-size: 16px;
+    font-weight: 500px;
+    letter-spacing: 2px;
+}
+
+.coin2 p {
+    font-size: 15px;
+}
+
+.coin2base1:hover{
+    background: #52080e;
+    opacity: 1.2;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.coin2base1:hover h1{
+    letter-spacing: 4px;
+}
+
+.coin2base1:hover p{
+    color: white;
+}
+
+.coin3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+.coin3 video{
+   border-radius: 20px 20px;
+}
