@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 5: Calculate the sum of numbers from 1 to 10</h1>
+    <div id="sum-result"></div>
+    
+    <script>
+        let sum = 0;
+
+        for (let i = 1; i <= 10; i++) {
+            sum += i; 
+        }
+
+        document.getElementById('sum-result').innerHTML = `The sum of numbers from 1 to 10 is: ${sum}`;
+    
+    </script>
+</body>
+
+</html>

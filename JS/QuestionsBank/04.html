@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 4: Print all the multiplication tables with numbers from 2 to 10</h1>
+    <div id="multiplication-tables"></div>
+    
+    <script>
+        const tablesElement = document.getElementById('multiplication-tables');
+
+        for (let num = 2; num <= 10; num++) {
+            tablesElement.innerHTML += `<h2>Multiplication Table of ${num}</h2>`;
+
+            
+            for (let i = 1; i <= 10; i++) {
+                const result = num * i;
+                tablesElement.innerHTML += `${num} x ${i} = ${result} <br>`;
+            }
+
+            tablesElement.innerHTML += `<br>`;
+        }
+    </script>
+</body>
+
+</html>
