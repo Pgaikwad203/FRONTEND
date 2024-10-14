@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 9: Calculate the average of the numbers in an array of numbers. (Take a minimum of 8
+    numbers in the array).</h1>
+    <p id="averageResult"></p>
+    <script>
+        let sum = 0;
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+            console.log(sum);
+        }
+        let average = sum / numbers.length;
+        document.getElementById("averageResult").innerHTML = `The average of the numbers in an array of numbers is: ${average}`;
+    </script>
+    
+</body>
+</html>

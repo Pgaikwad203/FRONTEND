@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 7: Calculate the sum of odd numbers greater than 10 and less than 30</h1>
+    <p id="oddNumbers"></p>
+    <script>
+        let sum = 0;
+        for (let i = 11; i < 30; i += 2) {
+            sum += i;
+        }
+        document.getElementById("oddNumbers").innerHTML = `The sum of odd numbers greater than 10 and less than 30 is: ${sum}`;
+    </script>
+</body>
+</html>

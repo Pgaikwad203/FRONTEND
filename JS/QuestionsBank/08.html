@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 8: Calculate the sum of numbers in an array of numbers. (Take a minimum of 8
+    numbers in the array).</h1>
+    <p id="sumResult"></p>
+    <script>
+        let sum = 0;
+        let numbers = [10, 12, 30, 24, 55, 69, 72, 81];
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        document.getElementById("sumResult").innerHTML = `The sum of numbers in an array of numbers is: ${sum}`;
+    </script>
+
+    
+</body>
+</html>

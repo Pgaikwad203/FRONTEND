@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 10: Create a function that receives an array of numbers and returns an array containing
+        only the positive numbers. ( Take min 10 elements consisting of at least four negative
+        numbers)</h1>
+    <p id="positiveResult"></p>
+    <script>
+        function getPositiveNumbers(arr) {
+                let positiveNumbers = [];
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > 0) {
+                        positiveNumbers.push(arr[i]); 
+                    }
+                }
+                return positiveNumbers;
+            }
+
+            let numbers = [10, -3, 25, -45, 8, -1, 13, -22, 0, 7];
+            let result = getPositiveNumbers(numbers);
+
+            document.getElementById("positiveResult").innerHTML = `The positive numbers in the array are: ${result}`;
+    </script>
+</body>
+
+</html>
