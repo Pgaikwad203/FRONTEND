@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Question 13: Rotate an array to the right 1 position (For example if array elements are 2,8,3 after
+    rotation it should be 3,2,8)</h1>
+
+    <p id="rotatedResult"></p>
+
+    <script>
+        let numbers = [2, 8, 3];
+        let rotatedNumbers = numbers.slice(1, numbers.length);
+        rotatedNumbers = rotatedNumbers.concat(numbers[0]);
+        
+        document.getElementById("rotatedResult").innerHTML = `The rotated array is: ${rotatedNumbers}`;
+    </script>
+
+</body>
+</html>

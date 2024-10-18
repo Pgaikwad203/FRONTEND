@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 1: Change the 7 different background colors of the page clicking on the button</h1>
+
+    <button onclick="changeColor()">Change Background Color</button>
+
+    <script>
+        let colors = [ "red", "blue", "green", "yellow", "purple", "brown", "orange", "cyan", "magenta", "pink" ];
+
+        let currentColorIndex = 0;
+
+        function changeColor() {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+    </script>
+
+</body>
+
+</html>
