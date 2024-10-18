@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button {
+            font-size: 25px;
+            margin-left: 50px;
+        }
+
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
 </head>
 <body>
     <h1>Question 13: Rotate an array to the right 1 position (For example if array elements are 2,8,3 after
     rotation it should be 3,2,8)</h1>
 
-    <p id="rotatedResult"></p>
+        <button onclick="rotateArray()">Rotate Array to the Right</button>
+        <p>Rotated Array: <span id="rotatedArray"></span></p>
 
-    <script>
-        let numbers = [2, 8, 3];
-        let rotatedNumbers = numbers.slice(1, numbers.length);
-        rotatedNumbers = rotatedNumbers.concat(numbers[0]);
-        
-        document.getElementById("rotatedResult").innerHTML = `The rotated array is: ${rotatedNumbers}`;
-    </script>
+    
+        <script>
+            let array = [2, 8, 3];
+
+            function rotateArray() {
+                let lastElement = array.pop(); 
+                array.unshift(lastElement);   
+
+                document.getElementById("rotatedArray").innerHTML = array.join(", ");
+            }
+        </script>
 
 </body>
-</html>
+</html> 
