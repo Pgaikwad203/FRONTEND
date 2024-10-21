@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 22: Century From Year
+    The first century spans from the year 1 up to and including the year 100, The second
+    - from the year 101 up to and including the year 200, etc. Given a year, return the
+    century it is in.
+    function century(year) {
+    // Your solution
+    };
+    console.log(century(1705)); // 18
+    console.log(century(1900)); // 19
+    console.log(century(1601)); // 17
+    console.log(century(2000)); // 20
+    console.log(century(89)); // 1 </h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+
+    <script>
+
+        function century(year) {
+
+            let century = Math.ceil(year / 100);
+            return century
+        }
+        console.log(century(1705)); // 18
+        document.getElementById("demo1").innerHTML = century(1705);
+        console.log(century(1900)); // 19
+        document.getElementById("demo2").innerHTML = century(1900);
+        console.log(century(1601)); // 17
+        document.getElementById("demo3").innerHTML = century(1601);
+        console.log(century(2000)); // 20
+        document.getElementById("demo4").innerHTML = century(2000);
+        console.log(century(89)); // 1
+        document.getElementById("demo5").innerHTML = century(89);
+    </script>
+</body>
+</html>

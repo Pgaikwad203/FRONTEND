@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 24: Write a JS program to input a number from user and swap first and last digit of the
+    given number.
+    Example-
+    Input any number: 12345
+    Output Number after swapping first and last digit: 52341</h1>
+
+    <p id="demo"></p>
+    <script>
+        let number = prompt("Enter a number:");
+        let firstDigit = number.charAt(0);
+        let lastDigit = number.charAt(number.length - 1);
+        let newNumber = lastDigit + number.substring(1, number.length - 1) + firstDigit;
+        alert("The number after swapping first and last digit is: " + newNumber);
+        document.getElementById("demo").innerHTML = newNumber;
+    </script>
+</body>
+</html>

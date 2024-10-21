@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 23: . Write a function that takes any non-negative integer as an argument and returns it
+    with its digits in descending order. Essentially, rearrange the digits to create the
+    highest possible number.
+    const descendingOrder = n => {
+    // Your solution
+    };
+    console.log(descendingOrder(0)); // 0
+    console.log(descendingOrder(1)); // 1
+    console.log(descendingOrder(1021)); // 2110
+    console.log(descendingOrder(42145)); // 54421
+    console.log(descendingOrder(145263)); // 654321
+    console.log(descendingOrder(123456789)); // 987654321</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        const descendingOrder = n => {
+            return parseInt(n.toString().split("").sort((a, b) => b - a).join(""));
+        };
+
+        console.log(descendingOrder(0)); // 0
+        document.getElementById("demo1").innerHTML = descendingOrder(0);
+        console.log(descendingOrder(1)); // 1
+        document.getElementById("demo2").innerHTML = descendingOrder(1);
+        console.log(descendingOrder(1021)); // 2110
+        document.getElementById("demo3").innerHTML = descendingOrder(1021);
+        console.log(descendingOrder(42145)); // 54421
+        document.getElementById("demo4").innerHTML = descendingOrder(42145);
+        console.log(descendingOrder(145263)); // 654321
+        document.getElementById("demo5").innerHTML = descendingOrder(145263);
+        console.log(descendingOrder(123456789)); // 987654321
+        document.getElementById("demo6").innerHTML = descendingOrder(123456789);
+
+    </script>
+</body>
+</html>

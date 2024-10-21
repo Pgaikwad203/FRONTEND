@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 25: Write a JS program to check whether the input character is vovel or consonant</h1>
+
+    <p id="demo"></p>
+    <script>
+        let character = prompt("Enter a character:");
+        if (character === "a" || character === "e" || character === "i" || character === "o" || character === "u") {
+            alert(character + " is a vovel");
+        } else {
+            alert(character + " is a consonant");
+        }
+        document.getElementById("demo").innerHTML = character;
+    </script>
+</body>
+</html>
