@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Str1 : Create a function called mixUp. It should take in two strings, and return the
+        concatenation of the two strings (separated by a space) slicing out and swapping the
+        first 2 characters of each. You can assume that the strings are at least 2 characters
+        long. For example:
+        mixUp('mix', pod'): Output should be— 'pox mid'
+        mixUp('dog', 'dinner'):Output should be— 'dig donner'</h1>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+
+
+    <script>
+
+        str1 = "dog";
+        str2 = "dinner";
+        function mixUp(str1, str2) {
+            let newStr = str2.slice(0, 2) + str1.slice(2) + " " + str1.slice(0, 2) + str2.slice(2);
+            return newStr;
+        }
+        document.getElementById("demo").innerHTML = mixUp("dog", "dinner");
+
+        str3 = "mix";
+        str4 = "pod";
+        function mixUp(str3, str4) {
+            let newStr = str4.slice(0, 2) + str3.slice(2) + " " + str3.slice(0, 2) + str4.slice(2);
+            return newStr;
+        }
+        document.getElementById("demo2").innerHTML = mixUp("mix", "pod");
+    </script>
+
+</body>
+
+</html>

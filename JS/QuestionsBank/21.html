@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 21: Create a function that takes an integer as an argument and returns "Even" for even
+    numbers or "Odd" for odd numbers.</h1>
+    <p id="oddOrEven"></p>
+    <script>
+        let number = prompt("Enter a number");
+
+        function oddOrEven(number) {
+            if (number % 2 === 0) {
+                return "Even";
+            } else {
+                return "Odd";
+            }
+        }
+        document.getElementById("oddOrEven").innerHTML = `The number ${number} is ${oddOrEven(number)}`;
+    </script>
+</body>
+</html>
