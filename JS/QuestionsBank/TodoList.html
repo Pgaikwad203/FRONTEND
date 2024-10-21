@@ -31,6 +31,12 @@
             margin: 0px 250px 0px 250px;
         }
 
+        li {
+            list-style: square;   
+            padding: 10px;
+            margin: 10px;
+        }
+
     </style>
 </head>
 
@@ -49,8 +55,9 @@
         function addItem() {
             let todoItem = myInput.value;
             console.log("TODO ITEM=", todoItem);
-            ulList.innerHTML = `<li> ${todoItem} </li>`;
+            ulList.innerHTML += `<li> ${todoItem} </li>`;
             myInput.value = "";
+
         }
     </script>
 </body>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 17: Create a function to reverse a string. </h1>
+    <p id="reverseResult"></p>
+    <script>
+        let str = "Hello World";
+        let reversedStr = str.split("").reverse().join("");
+        document.getElementById("reverseResult").innerHTML = `The reversed string is: ${reversedStr}`;
+    </script>
+    
+</body>
+</html>

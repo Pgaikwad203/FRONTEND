@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 20: .Create a function that will receive two arrays and will return an array with elements
+        that are in the first array but not in the second. let ar1 = [1, 2, 3, 10, 5, 3, 14]; let ar2 =
+        [-1, 4, 5, 6, 14];</h1>
+
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+
+    <script>
+
+        let ar1 = [1, 2, 3, 10, 5, 3, 14];
+        let ar2 = [-1, 4, 5, 6, 14];
+        let result = ar1.filter(x => !ar2.includes(x));
+        let result2 = ar2.filter(x => !ar1.includes(x));
+        let result3 = ar1.filter(x => !ar2.includes(x)).concat(ar2.filter(x => !ar1.includes(x)));
+
+        document.getElementById("result").innerHTML = `The result is: ${result}`;
+        document.getElementById("result2").innerHTML = `The result is: ${result2}`;
+        document.getElementById("result3").innerHTML = `The result is: ${result3}`;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 16: Create a function to reverse an array of numbers.(Take a minimum of 8 numbers in
+    the array).</h1>
+    <p id="reverseResult"></p>
+    <script>
+        let numbers = [10, 12, 100, 24, 55, 69, 72, 81];
+        let reversedNumbers = numbers.reverse();
+        document.getElementById("reverseResult").innerHTML = `The reversed array is: ${reversedNumbers}`;
+    </script>
+    
+</body>
+</html>

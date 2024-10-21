@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 14: Find the maximum number in an array of numbers (Take a minimum of 8 numbers in
+    the array).</h1>
+    <p id="maxResult"></p>
+    <script>
+        let numbers = [10, 12, 100, 24, 55, 69, 72, 81];
+        let max = numbers[0];
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        document.getElementById("maxResult").innerHTML = `The maximum number in an array of numbers is: ${max}`;
+    </script>
+    
+</body>
+</html>

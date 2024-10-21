@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 18: Create a function that will merge two arrays and return the result as a new array</h1>
+    <p id="mergeResult"></p>
+
+    <script>
+        function mergeArrays(arr1, arr2) {
+            return arr1.concat(arr2);
+        }
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        let result = mergeArrays(arr1, arr2);
+        document.getElementById("mergeResult").innerHTML = `The merged array is: ${result}`;
+    </script>
+    
+</body>
+</html>
