@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 28 : The given input is a string of multiple words with a single space between each of
+    them. Abbreviate the name and return the name initials.
+    If input is ……….const input = "George Raymond Richard Martin";
+    Output should be……….."GRRM"; (HINT: Use Javascript Array Iteration map
+    method)</h1>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        const input = "George Raymond Richard Martin";
+        console.log(input);
+        const result = input.split(" ").map(word => word[0]).join("");
+        console.log(result);
+        document.getElementById("demo").innerHTML = result;
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 26  : Write a Simple Calculator Program using switch Statement</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        let num1 = parseInt(prompt("Enter the first number:"));
+        let num2 = parseInt(prompt("Enter the second number:"));
+        let operator = prompt("Enter the operator (+, -, *, /):");
+
+        switch (operator) {
+            case "+":
+                document.getElementById("demo").innerHTML = num1 + num2;
+                break;
+            case "-":
+                document.getElementById("demo").innerHTML = num1 - num2;
+                break;
+            case "*":
+                document.getElementById("demo").innerHTML = num1 * num2;
+                break;
+            case "/":
+                document.getElementById("demo").innerHTML = num1 / num2;
+                break;
+            default:
+                document.getElementById("demo").innerHTML = "Invalid operator";
+        }
+    </script>
+</body>
+</html>
