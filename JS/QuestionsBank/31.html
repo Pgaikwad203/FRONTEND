@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Groups</title>
+    <style>
+        h1,
+        h2,
+        p {
+            font-size: 24px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 31: FizzBuzz Grouped by Categories</h1>
+
+    <h2>FizzBuzz:</h2>
+    <p id="fizzBuzzResult"></p>
+
+    <h2>Fizz:</h2>
+    <p id="fizzResult"></p>
+
+    <h2>Buzz:</h2>
+    <p id="buzzResult"></p>
+
+    <h2>Other Numbers:</h2>
+    <p id="otherResult"></p>
+
+    <script>
+        // Arrays to store each group
+        const fizzBuzz = [];
+        const fizz = [];
+        const buzz = [];
+        const others = [];
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                fizzBuzz.push(i); // Add to FizzBuzz array
+            } else if (i % 3 === 0) {
+                fizz.push(i); // Add to Fizz array
+            } else if (i % 5 === 0) {
+                buzz.push(i); // Add to Buzz array
+            } else {
+                others.push(i); // Add to Other Numbers array
+            }
+        }
+
+        // Display each group in the corresponding HTML element
+        document.getElementById("fizzBuzzResult").innerHTML = fizzBuzz.join(", ");
+        document.getElementById("fizzResult").innerHTML = fizz.join(", ");
+        document.getElementById("buzzResult").innerHTML = buzz.join(", ");
+        document.getElementById("otherResult").innerHTML = others.join(", ");
+    </script>
+</body>
+
+</html>

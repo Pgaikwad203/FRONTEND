@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 33: .Write a JavaScript function that accepts a string as a parameter and converts
+    the first letter of each word of the string in upper case. Example string : 'the
+    quick brown fox' Expected Output : 'The Quick Brown Fox ' .</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        let str = "the quick brown fox";
+        let words = str.split(" ");
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        }
+        let result = words.join(" ");
+        document.getElementById("demo").innerHTML = result;
+    </script>
+
+</body>
+</html>
