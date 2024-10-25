@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,
+        p {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 29: Write a function that takes an array of numbers as input and returns a new
+    array with all the numbers doubled.</h1>
+
+    <p id="doubledResult"></p>
+
+    <script>
+        let numbers = [1, 2, 3, 4, 5];
+        let doubledNumbers = numbers.map(number => number * 2);
+        document.getElementById("doubledResult").innerHTML = `The doubled array is: ${doubledNumbers}`;
+    </script>
+</body>
+</html>

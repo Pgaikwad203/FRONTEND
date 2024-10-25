@@ -31,17 +31,13 @@
             height: auto;
             max-width: 500px;
             max-height: 700px;
-           
             display: none;
-    
         }
 
         .slideshow img.active {
             display: block;
-    
         }
 
-        
         .overlay-text {
             position: absolute;
             top: 93%;
@@ -54,7 +50,7 @@
             font-weight: bold;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             z-index: 10;
-            pointer-events: none; 
+            pointer-events: none;
         }
 
         audio {
@@ -105,15 +101,12 @@
 </head>
 
 <body>
-    
-    <audio autoplay loop sound>
-        <source src="/HTML/HappyBirthday/my-queenpaglasongs_wdD9vz9j.mp3" type="audio/mpeg">
-    </audio>
 
     <div class="slideshow">
         <div class="overlay-text">Happy Birthday Ammi <i>❤️</i></div>
 
-        <img class="active" src="/HTML/HappyBirthday/WhatsApp Image 2024-10-24 at 12.37.18_3fe9e5c4.jpg" alt="photo">
+        <img class="active" src="/HTML/HappyBirthday/WhatsApp Image 2024-10-24 at 12.37.18_3fe9e5c4 - Copy.jpg"
+            alt="photo">
         <img src="/HTML/HappyBirthday/WhatsApp Image 2024-10-24 at 12.37.18_44346313.jpg" alt="photo">
         <img src="/HTML/HappyBirthday/WhatsApp Image 2024-10-24 at 12.37.18_c4ac171a.jpg" alt="photo">
         <img src="/HTML/HappyBirthday/WhatsApp Image 2024-10-24 at 12.37.19_569fb2f8.jpg" alt="photo">
@@ -122,22 +115,27 @@
         <img src="/HTML/HappyBirthday/WhatsApp Image 2024-10-24 at 12.37.19_fb9f7df6.jpg" alt="photo">
     </div>
 
+    <audio controls autoplay loop>
+        <source src="/HTML/HappyBirthday/my-queenpaglasongs_wdD9vz9j - Copy.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
         let currentImageIndex = 0;
         const images = document.querySelectorAll('.slideshow img');
         const totalImages = images.length;
 
+        window.addEventListener('load', () => {
+            setInterval(showNextImage, 3000);
+        });
+
         function showNextImage() {
             images[currentImageIndex].classList.remove('active');
-
-        
             currentImageIndex = (currentImageIndex + 1) % totalImages;
-
             images[currentImageIndex].classList.add('active');
         }
-
-        setInterval(showNextImage, 3000);
     </script>
+
 </body>
 
 </html>

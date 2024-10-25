@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Question 30: Write a function that takes an array of numbers as input and returns the
+    second-highest number in the array.</h1>
+
+    <p id="secondHighestResult"></p>
+
+    <script>
+        let numbers = [1, 2, 3, 4, 5];
+        let sortedNumbers = numbers.sort((a, b) => b - a);
+        let secondHighest = sortedNumbers[1];
+       document.getElementById("secondHighestResult").innerHTML = `The second-highest number in the array is: ${secondHighest}`;
+    </script>
+</body>
+</html>
