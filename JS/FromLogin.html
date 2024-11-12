@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: grey;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            width: 500px;
+            height: 300px;
+            padding: 30px;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+
+        .center h1 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 40px;
+        }
+
+        .center input {
+            width: 100%;
+            padding: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: olive;
+            color: aliceblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <h1>Member Login</h1>
+            <form action="" onsubmit="checkUserCredentials(event)">
+                <input type="text" id="username" placeholder="User Name" /><br /><br />
+
+                <input type="password" id="password" placeholder="Password" /><br /><br />
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+    </div>
+    <script>
+        let userName = document.getElementById("username");
+        console.log(userName);
+
+        let password = document.getElementById("password");
+        console.log(password);
+
+        const users = [
+            { username: "amitghade", password: "123456" },
+            { username: "prasanna", password: "pras1234" },
+            { username: "aryan", password: "aryan12434" },
+            { username: "prathamesh", password: "prathamesh1234" },
+            { username: "priyanshu", password: "8520" },
+        ];
+
+        function checkUserCredentials() {
+        
+            // let flag = false;
+            // for (let i = 0; i < users.length; i++) {
+            //     if (
+            //         users[i].username === userName.value &&
+            //         users[i].password === password.value
+            //     ) {
+            //         flag = true;
+            //         break;
+            //     }
+            // }
+            // if (flag) {
+            //     alert("Login Success");
+            //     window .location.href = "https://www.google.com/";
+            // } else {
+            //     alert("Login Failed");
+            // }
+
+            event.preventDefault();
+            
+            let userFound = false;
+            let passwordCorrect = false;
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].username === userName.value) {
+                    userFound = true;
+
+                    if (users[i].password === password.value) {
+                        passwordCorrect = true;
+                        break;
+                    }
+                }
+            }
+
+            if (userFound && passwordCorrect) {
+                alert("Login successful");
+                window.location.href = "https://www.google.com/";
+            } else if (userFound && !passwordCorrect) {
+                alert("Password is wrong");
+            } else {
+                alert("User not found");
+            }
+
+        }
+    </script>
+</body>
+
+</html>
