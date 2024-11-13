@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(0, 0, 0, 0.9);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .input-container{
+            position: relative;
+            width: 600px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            padding-right: 30px;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+
+        .icon{
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: transparent;
+        }
+
+        .icon.valid{
+            color: green;
+        }
+
+        .icon.invalid{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <input type="text" placeholder="kiran123@gmail.com" id="emailInput" oninput="validateEmail() ">
+        <span class="icon" id="icon">✔️</span>
+    </div>
+
+    <script>
+        function validateEmail() {
+            const emailInput = document.getElementById("emailInput").value;
+            const icon = document.getElementById("icon");
+
+            const isValid = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{1,5}$/.test(emailInput);
+
+            if (isValid) {
+                icon.classList.add("valid");
+                icon.classList.remove("invalid");
+                icon.textContent = "✔️";
+            } else {
+                icon.classList.add("invalid");
+                icon.classList.remove("valid");
+                icon.textContent = "❌";
+            }
+        }
+    </script>
+    
+</body>
+</html>
