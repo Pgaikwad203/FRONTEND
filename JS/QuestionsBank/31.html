@@ -40,6 +40,7 @@
         for (let i = 1; i <= 100; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
                 fizzBuzz.push(i); // Add to FizzBuzz array
+
             } else if (i % 3 === 0) {
                 fizz.push(i); // Add to Fizz array
             } else if (i % 5 === 0) {
@@ -51,6 +52,7 @@
 
         // Display each group in the corresponding HTML element
         document.getElementById("fizzBuzzResult").innerHTML = fizzBuzz.join(", ");
+        console.log(fizzBuzz);
         document.getElementById("fizzResult").innerHTML = fizz.join(", ");
         document.getElementById("buzzResult").innerHTML = buzz.join(", ");
         document.getElementById("otherResult").innerHTML = others.join(", ");
