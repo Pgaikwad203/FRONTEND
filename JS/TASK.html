@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-left: 30%;
+        }
+
+        label {
+            margin-left: 100px;
+            font-size: 20px;
+        }
+
+        input {
+            margin-left: 100px;
+            height: 30px;
+            width: 400px;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            height: 40px;
+            width: 407px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration From</h1>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required><br><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"  placeholder="Enter your Address"  required><br><br>
+        <div>
+            <label for="number">Number:</label><br>
+            <input type="number" id="number" name="number" placeholder="Enter your Number" oninput="checknumber()"  required><span>10/10</span><br><br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function checknumber() {
+            let number = document.getElementById("number").value;
+            let span = document.querySelector("span");
+           
+
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
