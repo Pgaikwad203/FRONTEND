@@ -30,6 +30,15 @@
             height: 40px;
             width: 407px;
         }
+
+        .counter {
+            position: absolute;
+            left: 922px;
+            top: 47%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: grey;
+        }
     </style>
 </head>
 
@@ -41,24 +50,31 @@
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" placeholder="Enter your Email" required><br><br>
         <label for="address">Address:</label><br>
-        <input type="text" id="address" name="address"  placeholder="Enter your Address"  required><br><br>
+        <input type="text" id="address" name="address" placeholder="Enter your Address" required><br><br>
         <div>
             <label for="number">Number:</label><br>
-            <input type="number" id="number" name="number" placeholder="Enter your Number" oninput="checknumber()"  required><span>10/10</span><br><br>
+            <input type="text" id="number" name="number" placeholder="Enter your Number" oninput="checkLength()" /><span
+                id="counter" class="counter">10/10</span><br><br>
         </div>
         <input type="submit" value="Submit">
-    </form>
 
-    <script>
-        function checknumber() {
-            let number = document.getElementById("number").value;
-            let span = document.querySelector("span");
-           
+        <script>
+            function checkLength() {
+                const input = document.getElementById('number');
+                const counter = document.getElementById('counter');
 
-            
-        }
+                let inputValue = input.value; //actual value which user type
 
-    </script>
+                let length = inputValue.length;//imp(length of inputvalue)
+                if (length > 10) {
+                    input.value = inputValue.slice(0, 10);
+                    alert("bas itna hi ");  //10 tak ke no. show honge jo user 10 se jada bhi type karega
+                }
+
+                counter.textContent = `${10-input.value.length}/10`;
+            }
+        </script>
+
 
 </body>
 
