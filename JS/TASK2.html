@@ -8,15 +8,17 @@
 </head>
 
 <body>
+
+    <h1>Prime numbers</h1>
     
     <script>
         let arr = [10, 12, 15, 20, 22];
-        let k = 3;
+        let m = 3;
         let result = [];
 
         for (let i = 0; i < arr.length; i++) {
             let num = arr[i];
-            for (let j = 1; j <= k; j++) {
+            for (let j = 1; j <= m; j++) {
                 num += j;
                 if (isPrime(num)) {
                     result.push(num);
@@ -40,6 +42,40 @@
             }
             return true;
         }
+
+        // let arr = [8, 12, 13, 24, 89];
+        //     let m = 4;
+        //     let result = [];
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         let num = arr[i];
+        //         for (let j = 1; j <= m; j++) {
+        //             num = arr[i];
+        //             num += j;
+        //             if (isPrime(num)) {
+        //                 result.push(num);
+        //                 num = 0;
+        //                 break;
+        //             }
+        //         }
+               
+        //     }
+        //     console.log(result);
+
+        //     function isPrime(num) {
+        //         if (num <= 1) {
+        //             return false;
+        //         }
+        //         for (let i = 2; i < num; i++) {
+        //             if (num % i === 0) {
+        //                 return false;
+        //             }
+        //         }
+        //         return true;
+        //     }
+
+
+
     </script>
 
 </body>

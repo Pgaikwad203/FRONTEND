@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background-color: aqua;
+        }
+        .container{
+            box-shadow: 10px 10px 10px 10px #888888;
+            height: 500px;
+            width: 500px;
+            margin: auto;
+            background-color: white;
+        }
+
         h1 {
             text-align: center;
+           padding-top: 50px;
         }
 
-        form {
-            margin-left: 30%;
-        }
-
+        
         label {
-            margin-left: 100px;
+            margin-left: 50px;
             font-size: 20px;
         }
 
         input {
-            margin-left: 100px;
+            margin-left: 50px;
             height: 30px;
             width: 400px;
         }
@@ -29,12 +38,13 @@
             background-color: green;
             height: 40px;
             width: 407px;
+            border: none;
         }
 
         .counter {
             position: absolute;
             left: 922px;
-            top: 47%;
+            top: 55%;
             transform: translateY(-50%);
             font-size: 14px;
             color: grey;
@@ -43,37 +53,39 @@
 </head>
 
 <body>
-    <h1>Registration From</h1>
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your Email" required><br><br>
-        <label for="address">Address:</label><br>
-        <input type="text" id="address" name="address" placeholder="Enter your Address" required><br><br>
-        <div>
-            <label for="number">Number:</label><br>
-            <input type="text" id="number" name="number" placeholder="Enter your Number" oninput="checkLength()" /><span
-                id="counter" class="counter">10/10</span><br><br>
-        </div>
-        <input type="submit" value="Submit">
+    <div class="container">
+        <h1>Registration From</h1>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required><br><br>
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" placeholder="Enter your Address" required><br><br>
+            <div>
+                <label for="number">Number:</label><br>
+                <input type="text" id="number" name="number" placeholder="Enter your Number"
+                    oninput="checkLength()" /><span id="counter" class="counter">10/10</span><br><br>
+            </div>
+            <input type="submit" value="Submit">
+    </div>
 
-        <script>
-            function checkLength() {
-                const input = document.getElementById('number');
-                const counter = document.getElementById('counter');
+    <script>
+        function checkLength() {
+            const input = document.getElementById('number');
+            const counter = document.getElementById('counter');
 
-                let inputValue = input.value; //actual value which user type
+            let inputValue = input.value; //actual value which user type
 
-                let length = inputValue.length;//imp(length of inputvalue)
-                if (length > 10) {
-                    input.value = inputValue.slice(0, 10);
-                    alert("bas itna hi ");  //10 tak ke no. show honge jo user 10 se jada bhi type karega
-                }
-
-                counter.textContent = `${10-input.value.length}/10`;
+            let length = inputValue.length;//imp(length of inputvalue)
+            if (length > 10) {
+                input.value = inputValue.slice(0, 10);
+                alert(" only 10 digits allowed ");  //10 tak ke no. show honge jo user 10 se jada bhi type karega
             }
-        </script>
+
+            counter.textContent = `${10 - input.value.length}/10`;
+        }
+    </script>
 
 
 </body>
