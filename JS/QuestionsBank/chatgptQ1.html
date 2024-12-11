@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Question 1</h1>
+
+    <script>
+        function secondLargest(arr) {
+            const uniqueNumbers = [...new Set(arr)];
+            if (uniqueNumbers.length < 2) {
+                return null;
+            }
+            uniqueNumbers.sort((a, b) => b - a);
+            return uniqueNumbers[1];
+        }
+
+        console.log(secondLargest([1, 2, 3, 4, 50, 500 , 4, 5000, 50000, 50000, 50000])); // Output: 5000
+        console.log(secondLargest([10, 20, 20, 8, 12])); // Output: 12
+        console.log(secondLargest([5, 5, 5])); // Output: null
+        console.log(secondLargest([1])); // Output: null
+        console.log(secondLargest([])); // Output: null
+    </script>
+
+</body>
+
+
+</html>

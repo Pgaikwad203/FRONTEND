@@ -27,3 +27,8 @@ console.log(Math.pow(2, 3));
 console.log(Math.random());
 
 console.log((math.random() * 10) + 1);
+console.log(Math.floor(math.random() * 10) + 1);
+
+min = 10;
+max = 20;
+console.log(Math.floor(Math.random() * (max - min + 1) + min));
