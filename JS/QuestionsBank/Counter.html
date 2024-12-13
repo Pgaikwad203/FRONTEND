@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+        background-color: skyblue;
+    }
+
+    .card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 465px;
+        height: 100px;
+        margin-left: 36.5%;
+    }
+
+    button {
+        padding: 10px;
+        width: 100px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        margin-left: 50px;
+    }
+
+    .cent {
+        margin-left: 38%;
+    }
+
+    h1 {
+        margin-left: 50px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <h1>Counting with a local variable.</h1>
+    <br>
+    <div class="card">
+        <p id="demo">0</p>
+    </div>
+    <br>
+    <br>
+    <button type="button" onclick="myFunction()" class="cent">Count ++</button>
+    <button type="button" onclick="myFunction0()">reset</button>
+    <button type="button" onclick="myFunction1()">Count --</button>
+
+
+    <script>
+        function x() {
+            let counter = 0;
+            return {
+                add: function () {
+                    counter++;
+                    return counter;
+                },
+
+                reset: function () {
+                    counter = 0;
+                    return counter;
+                },
+                sub: function () {
+                    counter--;
+                    return counter;
+                }
+            };
+        }
+
+        const count = x();
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = count.add();
+        }
+
+        function myFunction0() {
+            document.getElementById("demo").innerHTML = count.reset();
+        }
+
+        function myFunction1() {
+            document.getElementById("demo").innerHTML = count.sub();
+        }
+    </script>
+</body>
+
+</html>
