@@ -58,7 +58,7 @@
         function x() {
             let counter = 0;
             return {
-                add: function () {
+                add () {
                     counter++;
                     return counter;
                 },
@@ -75,6 +75,7 @@
         }
 
         const count = x();
+        console.log(count);
 
         function myFunction() {
             document.getElementById("demo").innerHTML = count.add();
