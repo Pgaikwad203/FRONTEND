@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin-left: 30px;
+            background-color: skyblue;
+        }
+
+        .card{
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 600px;
+            height: auto;
+            margin-left: 30%;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: blueviolet;
+            color: whitesmoke;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div>
+            <h1>Question 1</h1>
+            <p>What is the capital of France?</p>
+            <input type="radio" id="paris" name="CITY" value="PARIS">
+            <label for="paris">PARIS</label><br>
+            <input type="radio" id="london" name="CITY" value="LONDON">
+            <label for="london">LONDON</label><br>
+            <input type="radio" id="berlin" name="CITY" value="BERLIN">
+            <label for="berlin">BERLIN</label><br>
+            <input type="radio" id="rome" name="CITY" value="ROME">
+            <label for="rome">ROME</label><br>
+        </div>
+
+        <div>
+            <h1>Question 2</h1>
+            <p>What is 2 + 2?</p>
+            <input type="radio" id="three" name="NUMBER" value="3">
+            <label for="three">3</label><br>
+            <input type="radio" id="four" name="NUMBER" value="4">
+            <label for="four">4</label><br>
+            <input type="radio" id="five" name="NUMBER" value="5">
+            <label for="five">5</label><br>
+            <input type="radio" id="six" name="NUMBER" value="6">
+            <label for="six">6</label><br>
+        </div>
+
+        <div>
+            <h1>Question 3</h1>
+            <p>What is the capital of Japan?</p>
+            <input type="radio" id="beijing" name="CAPITAL" value="BEIJING">
+            <label for="beijing">BEIJING</label><br>
+            <input type="radio" id="tokyo" name="CAPITAL" value="TOKYO">
+            <label for="tokyo">TOKYO</label><br>
+            <input type="radio" id="seoul" name="CAPITAL" value="SEOUL">
+            <label for="seoul">SEOUL</label><br>
+            <input type="radio" id="bangkok" name="CAPITAL" value="BANGKOK">
+            <label for="bangkok">BANGKOK</label><br>
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="Submit" onclick="checking()">
+    </div>
+
+    <script>
+        function checking() {
+            
+            const q1 = document.querySelector('input[name="CITY"]:checked')?.value;
+            const q2 = document.querySelector('input[name="NUMBER"]:checked')?.value;
+            const q3 = document.querySelector('input[name="CAPITAL"]:checked')?.value;
+
+            
+            const answers = {
+                CITY: "PARIS",
+                NUMBER: "4",
+                CAPITAL: "TOKYO"
+            };
+
+            let correct = 0;
+            let incorrect = 0;
+
+            if (q1 === answers.CITY) {
+                correct++;
+            } else {
+                incorrect++;
+            }
+
+            if (q2 === answers.NUMBER) {
+                correct++;
+            } else {
+                incorrect++;
+            }
+
+            if (q3 === answers.CAPITAL) {
+                correct++;
+            } else {
+                incorrect++;
+            }
+
+            alert(`You got ${correct} correct and ${incorrect} wrong.`);
+        }
+    </script>
+</body>
+
+</html>
