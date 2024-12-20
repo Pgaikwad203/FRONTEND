@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+        }
+
+        .box {
+            height: 200px;
+            width: 400px;
+            border-radius: 5px;
+            position: absolute;
+            margin-left: 50px;
+            margin-top: 20px;
+            border: 2px solid;
+            padding: 10px;
+            box-shadow: 5px 10px;
+        }
+
+        label{
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        input {
+            height: 30px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-top: 300px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>change color</h1>
+        <div class="box" id="demo"> </div>
+        <div>
+            <from>
+                <input type="text" id="colorPut" oninput="magic()"><br><br>
+                <label>Put the color name</label>
+            </from>  
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("demo").style.backgroundColor = "blue";
+        let myInput = document.getElementById("colorPut");
+        console.log(myInput.value);
+
+        function magic() {
+            let newColor = myInput.value;
+            console.log(newColor);
+            document.getElementById("demo").style.backgroundColor = newColor;
+        }
+
+    </script>
+</body>
+
+</html>
