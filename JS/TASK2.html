@@ -81,3 +81,58 @@
 </body>
 
 </html>
+
+
+
+The error indicates that the `chkdsk` utility cannot run because it lacks administrative privileges or the disk is being used by another process. Follow these steps to resolve the issue:
+
+---
+
+### **Step 1: Run Command Prompt as Administrator**
+1. **Open Command Prompt with elevated privileges:**
+   - Press `Win + S` (or click the Start menu).
+   - Type `cmd` in the search bar.
+   - Right-click on "Command Prompt" and select **Run as Administrator**.
+
+2. **Run `chkdsk`:**
+   - In the elevated Command Prompt, type:
+     ```cmd
+     chkdsk C: /f
+     ```
+   - Replace `C:` with the drive letter of the disk you want to check. Use `/f` to fix disk errors or `/r` to locate bad sectors and recover data.
+
+---
+
+### **Step 2: Unlock the Disk**
+- If the disk is in use by another process, `chkdsk` may request a reboot.
+- It will display a message like:
+  ```
+  Chkdsk cannot run because the volume is in use by another process.
+  Would you like to schedule this volume to be checked the next time the system restarts? (Y/N)
+  ```
+- Press `Y` and hit Enter.
+- Restart your computer to allow `chkdsk` to run at boot time.
+
+---
+
+### **Step 3: Check for Active Processes**
+- Ensure no other programs are using the disk.
+- Close all file explorers or applications that might be accessing the disk.
+
+---
+
+### **Step 4: Use Safe Mode (Optional)**
+If you still face issues, restart your computer in **Safe Mode** to minimize interference:
+1. Press `Win + R`, type `msconfig`, and press Enter.
+2. Go to the **Boot** tab, select **Safe Boot**, and click **OK**.
+3. Restart the computer, run `chkdsk` in Safe Mode, and repeat the process.
+4. Afterward, disable Safe Boot in `msconfig` to restart normally.
+
+---
+
+### Common `chkdsk` Command Options:
+- `/f` - Fixes errors on the disk.
+- `/r` - Locates bad sectors and recovers readable information.
+- `/x` - Forces the volume to dismount before running the check.
+
+Let me know if you encounter further issues!
