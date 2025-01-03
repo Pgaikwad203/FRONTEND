@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>iPhone 16 Product Page</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            .dis {
+                padding-left: 130px;
+                padding-top: 50px;
+            }
+
+            a {
+                text-decoration: none;
+                border: 3px solid;
+                background-color: orange;
+                color: white;
+                font-size: 20px;
+                padding: 15px 20px;
+                margin-top: 50px;
+                margin-right: 10px;
+                border-radius: 5px;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .color {
+                background-color: brown;
+            }
+
+            .color2 {
+                color: blue;
+                margin-left: -200px;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .product-details {
+                padding: 20px;
+            }
+
+            .price-details {
+                margin: 10px 100px;
+            }
+
+            .display {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               
+                padding: 20px;
+            }
+
+            .card {
+                background-color: #fff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 100px;
+                height: 50px;
+                margin: 0px 20px;
+            }
+
+            button {
+                padding: 10px;
+                width: 50px;
+                background-color: brown;
+                color: white;
+            }
+
+            .cent {
+                margin-left: -40%;
+            }
+
+            h1 {
+                margin-left: 50px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .display2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .slide{
+                margin-right: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="display">
+            <div class="product-details">
+                <h1>
+                    iPhone 16 256 GB: 5G Mobile Phone with Camera Control,
+                    A18 Chip and a Big Boost in Battery Life.
+                    Works with AirPods; color Green
+                </h1>
+                <hr />
+
+                <div class="display">
+                    <img src="16210-gotlsYej.webp" alt="iPhone 16 Green" height="500px" width="530px" class="dis" />
+
+                    <div class="price-details">
+                        <h1 class="color2">Cost <br />
+                            -6% ₹84,900</h1>
+                        <h2>M.R.P.: ₹89,900</h2>
+                        <h3>
+                            Inclusive of all taxes <br />
+                            EMI starts at ₹4,116. No Cost EMI available
+                        </h3>
+                        <br>
+                        <br>
+
+                        <div class="display2">
+                            <button type="button" onclick="myFunction()" class="cent">+</button>
+                            <p id="demo" class="card">0</p>
+                            <button type="button" onclick="myFunction1()">-</button>
+                        </div>
+
+                        <div class="slide">
+                        <a href="https://www.apple.com/in/iphone-16/specs/"><i class="fas fa-shopping-cart"></i> Show about</a>
+                        <a href="https://www.flipkart.com/apple-iphone-16-black-128-gb/p/itmb07d67f995271?pid=MOBH4DQFG8NKFRDY&lid=LSTMOBH4DQFG8NKFRDYKOOGZ6&marketplace=FLIPKART&store=tyy%2F4io&srno=b_1_7&otracker=browse&fm=organic&iid=aa2b833b-bcc6-4d97-998b-b237553210d9.MOBH4DQFG8NKFRDY.SEARCH&ppt=None&ppn=None&ssid=dglvx72ets0000001735810018016" class="color"><i class="fas fa-bolt"></i> BUY NOW </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <script>
+                function x() {
+                    let counter = 0;
+                    return {
+                        add() {
+                            counter++;
+                            return counter;
+                        },
+
+                        sub: function () {
+                            counter--;
+                            return counter;
+                        }
+                    };
+                }
+
+                const count = x();
+                console.log(count);
+
+                function myFunction() {
+                    document.getElementById("demo").innerHTML = count.add();
+                }
+
+                function myFunction1() {
+                    document.getElementById("demo").innerHTML = count.sub();
+                }
+            </script>
+    </body>
+
+    </html>
