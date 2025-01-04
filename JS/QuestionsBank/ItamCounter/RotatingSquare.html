@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 30vw;
+        }
+        .box{
+            height: 10vh;
+            width: 8vw;
+            background-color: red;
+            
+        }
+        .anime{
+            animation: tran;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes tran {
+            25%{
+                transform: translateX(500px);
+            }
+            50%{
+                transform: translate(500px,500px);
+            }
+            75%{
+                transform: translate(0px,500px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="b" class="box">
+
+        </div>
+    </div>
+    <button id="btn">Click Here</button>
+</body>
+<script>
+    document.getElementById('btn').addEventListener('click',(e)=>{
+        let b = document.getElementById('b')
+        b.classList.toggle('anime');
+        console.log(b);
+        
+    })
+</script>
+</html>
