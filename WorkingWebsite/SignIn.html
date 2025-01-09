@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .back {
+      background-image: url(DeWatermark.ai_1736156990684.png);
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      height: 703px;
+      width: 100%;
+      position: relative;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .side {
+      position: relative;
+      width: 40%;
+      border: 5px solid whitesmoke;
+      padding: 15px 30px;
+      border-radius: 10px;
+      margin-left: 200px;
+      margin-top: -50px;
+    }
+
+    .center {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    h1 {
+      color: brown;
+      text-align: center;
+    }
+
+    label {
+      font-size: 15px;
+      color: black;
+    }
+
+    input {
+      height: 30px;
+      width: 90%;
+    }
+
+    select {
+      width: 92%;
+      height: 35px;
+    }
+
+    input[type="file"] {
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+      background: linear-gradient(rgb(255, 173, 114), rgb(246, 46, 113));
+      padding: 5px 195px;
+      font-size: 20px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+    }
+
+    a:hover {
+      color: black;
+      background: whitesmoke;
+      border: 2px solid black;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back">
+    <div class="container">
+      <img src="/WorkingWebsite/9.png" alt=" " height="150px" width="150px">
+      <div class="side">
+        <h1>Sign-In From</h1>
+        <div class="center">
+          <from>
+            <label for="First Name"> First Name </label>
+            <input type="text" placeholder="ex.Rahul" />
+            <br />
+            <br />
+            <label for="Enter Password">Enter Password </label>
+            <input type="text" placeholder="ex.Password@123" />
+            <br />
+            <br />
+            <label for="Enter Email"> Enter Email </label>
+            <input type="email" placeholder="ex.Rahulthakre203@gmil.com" />
+            <br />
+            <br />
+            <label for="Gender">Gender</label><br />
+            <select name="Gender" id="Gender">
+              <option value="others">others</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </from>
+
+          <from>
+            <label for="Last Name"> Last Name </label>
+            <input type="text" placeholder="ex.Thakre" />
+            <br />
+            <br />
+            <label for="ReEnter Password"> ReEnter Password </label>
+            <input type="text" placeholder="ex.Password@123" />
+            <br />
+            <br />
+            <label for="Enter PhoneNumber"> Enter PhoneNumber </label>
+            <input type="number" placeholder="ex.1234567890" />
+            <br />
+            <br />
+            <label for="myfile">Upload Photo</label>
+            <input type="file" id="myfile" name="myfile" />
+          </from>
+        </div>
+        <br />
+        <label for="Enter Address">Enter Address </label><br />
+        <textarea name="Address" id="demo" placeholder="plot no.3 manish nagar near flyover , nagpur" rows="5"
+          cols="68"></textarea>
+        <br />
+        <br />
+        <a href="Display.html">Create Account</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

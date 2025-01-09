@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .back {
+            background-image: url(DeWatermark.ai_1736156990684.png);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 703px;
+            width: 100%;
+            position: relative;
+        }
+
+
+        .container {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding-left: 300px;
+            padding-top: 100px;
+        }
+
+        .center {
+            width: 500px;
+            height: 430px;
+            padding: 30px;
+            background-color: transparent;
+            border: 3px solid whitesmoke;
+            border-radius: 10px;
+        }
+
+        .center h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .center input {
+            height: 50px;
+            width: 100%;
+            padding: 10px;
+        } 
+
+         input[type="submit"] {
+            background-color: rgb(46, 44, 44);
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+        }
+
+        button {
+            background-color: rgb(46, 44, 44);
+            color: aliceblue;
+            font-size: 15px;
+            padding: 5px 10px;
+        }
+
+        .new{
+            width: 50px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="back">
+
+
+        <div>
+            <img src="9.png" alt="">
+        </div>
+
+        <div class="container">
+            <div class="center">
+                <h1>User login</h1>
+                <form action="" onsubmit="checkUserCredentials(event)">
+                   
+                    <input type="text" id="username" placeholder="User Name" /><br /><br />
+
+                    <input type="password" id="password" placeholder="Password" /><br /><br />
+                    
+                    <br>
+                    <input type="submit" value="Login" />
+                </form>
+                <br>
+               
+                <div>
+                    <p id="google-login-btn" class="new"></p>
+                </div>
+
+                <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-context="signin" data-ux_mode="popup"
+                    data-callback="handleCredentialResponse" data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin" data-type="standard"></div>
+                <br>
+                <a href="http://127.0.0.1:5500/WorkingWebsite/SignIn.html">Sign-In</a>
+                &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="/WorkingWebsite/ForgotPassword.html">Forgot password</a>
+
+                   
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let userName = document.getElementById("username");
+        console.log(userName);
+
+        let password = document.getElementById("password");
+        console.log(password);
+
+        const users = [
+            { username: "amitghade", password: "123456" },
+            { username: "prasanna", password: "pras1234" },
+            { username: "aryan", password: "aryan12434" },
+            { username: "prathamesh", password: "prathamesh1234" },
+            { username: "priyanshu", password: "8520" },
+        ];
+
+        function checkUserCredentials() {
+
+            event.preventDefault();
+
+            let userFound = false;
+            let passwordCorrect = false;
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].username === userName.value) {
+                    userFound = true;
+
+                    if (users[i].password === password.value) {
+                        passwordCorrect = true;
+                        break;
+                    }
+                }
+            }
+
+            if (userFound && passwordCorrect) {
+                alert("Login successful");
+                window.location.href = "http://127.0.0.1:5500/WorkingWebsite/home.html";
+            } else if (userFound && !passwordCorrect) {
+                alert("Password is wrong");
+            } else {
+                alert("User not found");
+            }
+
+        }
+
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            alert("Google Sign-In Successful!");
+        }
+
+        const googleLoginBtn = document.getElementById("google-login-btn");
+        googleLoginBtn.addEventListener("click", function () {
+            // Trigger Google Sign-In manually
+            const googleButton = document.querySelector(".g_id_signin");
+            googleButton.click();
+        });
+    </script>
+</body>
+
+</html>
