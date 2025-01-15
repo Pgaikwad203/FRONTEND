@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Promises</h1>
+    <p id="demo"></p>
+    <script>
+      // function myDisplayer(some) {
+      //   document.getElementById("demo").innerHTML = some;
+      // }
+
+      // let myPromise = new Promise(function (myResolve, myReject) {
+      //   console.log(myResolve);
+      //   console.log(myReject);
+      //   let x = 0;
+
+      //   // some code (try to change x to 5)
+      //   setTimeout(() => {
+      //     if (x == 0) {
+      //       myResolve("OK");
+      //     } else {
+      //       myReject("Error");
+      //     }
+      //   }, 4000);
+      // });
+
+      // console.log(myPromise);
+
+      // myPromise.then(
+      //   function (value) {
+      //     console.log(value);
+      //     myDisplayer(value);
+      //   },
+      //   function (error) {
+      //     myDisplayer(error);
+      //   }
+      // );
+
+      const apiUrl = "https://dummyjson.com/products";
+
+      let productData = fetch(apiUrl);
+      console.log("PRODUCT DATA = ", productData);
+
+      productData
+        .then((data) => {
+          productData = data.json();
+          console.log(productData);
+          return productData;
+        })
+        .then((newData) => {
+          console.log("New Data =", newData);
+          displayData(newData);
+        });
+
+      function displayData(mydata) {
+        console.log(mydata);
+
+        let products = mydata.products;
+        console.log(products);
+
+        products.forEach((product) => {
+          console.log(product);
+          //displayData(product)on screen
+          let div = document.createElement("div");
+          div.innerHTML = `
+            <h3>${product.title}</h3>
+            <p>${product.description}</p>
+            <p>${product.price}</p>
+            <p>${product.rating}</p>
+            <p>${product.stock}</p>
+            <p>${product.category}</p>
+            <p>${product.brand}</p>
+            <p>${product.thumbnail}</p>
+            <p>${product.images}</p>
+          `;
+          document.body.appendChild(div);
+        });
+      }
+    </script>
+  </body>
+</html>
