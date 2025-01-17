@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
       body {
-        background-color: black;
+        background-color: brown;
       }
 
       form {
@@ -33,7 +33,7 @@
       }
 
       input[type="submit"] {
-        background-color: #4caf50;
+        background-color: #000;
         color: white;
         padding: 10px 20px;
         border: none;
@@ -41,12 +41,8 @@
         cursor: pointer;
       }
 
-      input[type="submit"]:hover {
-        background-color: #45a049;
-      }
-
       button {
-        background-color: #4caf50;
+        background-color: #000;
         color: white;
         padding: 10px 20px;
         border: none;
@@ -55,16 +51,13 @@
         margin-top: 20px;
       }
 
-      button:hover {
-        background-color: #45a049;
-      }
-
       #toy {
-        color: red;
+        color: #000;
       }
 
       #display {
-        color: blueviolet;
+        color: #000;
+        font-size: 20px;
       }
 
       .sub-container {
@@ -75,11 +68,19 @@
         border-radius: 10px;
         margin-top: 100px;
       }
+
+      marquee {
+        color: #fff;
+        font-size: 50px;
+        background-color: #000;
+        padding: 5px 0px;
+      }
     </style>
   </head>
 
   <body>
     <div class="container">
+      <marquee behavior="scroll" direction=" right">Fetching data from the server using a form</marquee>
       <form id="demo">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required />
@@ -98,82 +99,84 @@
     </div>
 
     <script>
-      const element = document.getElementById("demo");
-      element.addEventListener("submit", (e) => myFunction(e));
-      console.log(element);
+        const element = document.getElementById("demo");
+        element.addEventListener("submit", (e) => myFunction(e));
+        console.log(element);
 
-      async function myFunction(e) {
-        e.preventDefault();
-        const name = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-        const data = { name, password };
-        console.log(data);
+        async function myFunction(e) {
+          e.preventDefault();
+          const name = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const data = { name, password };
+          console.log(data);
 
-        try {
-          const response = await fetch(
-            " https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            }
-          );
+          try {
+            const response = await fetch(
+              " https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              }
+            );
 
-          const result = await response.json();
-          console.log("result", result);
+            const result = await response.json();
+            console.log("result", result);
 
-          document.getElementById("toy").innerHTML = `
-                <p> Data submited successfully</p>
-                `;
-        } catch (error) {
-          document.getElementById("toy").innerHTML = `
-                <p> There was an error submitting your data</p>
-                `;
+            document.getElementById("toy").innerHTML = `
+                    <p> Data submited successfully</p>
+                    `;
+          } catch (error) {
+            document.getElementById("toy").innerHTML = `
+                    <p> There was an error submitting your data</p>
+                    `;
+          }
         }
-      }
 
-      function myDisplayer(event) {
-        event.preventDefault();
+        function myDisplayer(event) {
+          event.preventDefault();
 
-        document.getElementById("display").innerHTML = "";
+          document.getElementById("display").innerHTML = "";
 
-        const apiUrl =
-          " https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject";
+          const apiUrl =
+            " https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject";
 
-        let productData = fetch(apiUrl);
-        console.log("PRODUCT DATA = ", productData);
+          let productData = fetch(apiUrl);
+          console.log("PRODUCT DATA = ", productData);
 
-        productData
-          .then((data) => {
-            productData = data.json();
-            console.log(productData);
-            return productData;
-          })
-          .then((newData) => {
-            console.log("New Data =", newData);
-            displayData(newData);
+          productData
+            .then((data) => {
+              productData = data.json();
+              console.log(productData);
+              return productData;
+            })
+            .then((newData) => {
+              console.log("New Data =", newData);
+              displayData(newData);
+            });
+
+          function displayData(mydata) {
+            console.log(mydata);
+
+            let products = mydata;
+            console.log("Products = ", products);
+
+            products.forEach((product) => {
+              console.log(product);
+
+              let div = document.createElement("div");
+              div.innerHTML = `
+                    <h3>${product.id}</h3>
+                    <p>${product.name}</p>
+                    <p>${product.password}</p>
+                    <button onclick="myDisplayer(event)">Delete</button>
+                    <button onclick="myDisplayer(event)">Edit</button>
+                    `;
+            document.getElementById("display").appendChild(div);
           });
 
-        function displayData(mydata) {
-          console.log(mydata);
-
-          let products = mydata;
-          console.log("Products = ", products);
-
-          products.forEach((product) => {
-            console.log(product);
-
-            let newDiv = (document.getElementById("display").innerHTML = `
-                <h3>${product.id}</h3>
-                <p>${product.name}</p>
-                <p>${product.password}</p>
-                <button onclick="myDisplayer(event)">Delete</button>
-                <button onclick="myDisplayer(event)">Edit</button>
-                `);
-            document.getElementById("display").appendChild();
-          });
         }
       }
     </script>
