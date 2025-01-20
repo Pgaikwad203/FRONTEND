@@ -11,6 +11,16 @@ body {
     width: 100%;
 }
 
+button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+button a i {
+  font-size: 20px;
+}
+
 #main {
     position: relative;
     overflow: hidden;
@@ -113,7 +123,7 @@ canvas {
 
 #page>h3 {
     position: absolute;
-    top: 55%;
+    top: 60%;
     font-family: gilroy;
     font-weight: 400;
     color: #7c7c7c;
@@ -122,8 +132,8 @@ canvas {
 
 #page>h4 {
     position: absolute;
-    top: 62%;
-    left: 25%;
+    top: 73%;
+    left: 30%;
     font-family: gilroy;
     font-weight: 500;
 }
