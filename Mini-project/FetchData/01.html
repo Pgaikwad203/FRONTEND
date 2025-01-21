@@ -82,6 +82,8 @@
 </head>
 
 <body>
+  
+
   <div class="container">
     <marquee behavior="scroll" direction=" right">Fetching data from the server using a form</marquee>
     <form id="demo">
@@ -99,7 +101,7 @@
       <p id="display1"></p>
       <button id="btn" onclick="myDisplayer(event)">Show Data</button>
       <p id="display"></p>
-     
+
     </div>
   </div>
 
@@ -185,77 +187,78 @@
       }
     }
 
-   async function Delete(id){
-    console.log(id);
+    async function Delete(id) {
+      console.log(id);
 
-    try {
-      const response = await fetch(
-        " https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject/"+id,
-        {
-          method: "DELETE",
-        }
-      );
+      try {
+        const response = await fetch(
+          " https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject/" + id,
+          {
+            method: "DELETE",
+          }
+        );
 
-      const result = await response.json();
-      console.log("Delete itam:", result);
+        const result = await response.json();
+        console.log("Delete itam:", result);
 
-      document.getElementById("btn").click();
-      document.getElementById("display1").innerHTML = `
+        document.getElementById("btn").click();
+        document.getElementById("display1").innerHTML = `
         <p> Data deleted successfully</p>
        `;
-    } catch (error) {
-      document.getElementById("display1").innerHTML = `
+      } catch (error) {
+        document.getElementById("display1").innerHTML = `
         <p> There was an error deleting your data</p>
        `;
+      }
+
     }
 
-   }
+    async function Edit(id) {
+      console.log(id);
 
-   async function Edit(id) {
-  console.log(id);
+      const newname = prompt("Enter your new username:");
+      const newpassword = prompt("Enter your new password:");
 
-  const newname = prompt("Enter your new username:");
-  const newpassword = prompt("Enter your new password:");
-
-  if (!newname || !newpassword) {
-    alert("Both username and password are required!");
-    return;
-  }
-
-  const updatedData = {
-    name: newname,
-    password: newpassword,
-  };
-
-  try {
-    const response = await fetch(
-      `https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject/${id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedData),
+      if (!newname || !newpassword) {
+        alert("Both username and password are required!");
+        return;
       }
-    );
 
-    const result = await response.json();
-    console.log("Updated item:", result);
+      const updatedData = {
+        name: newname,
+        password: newpassword,
+      };
+
+      try {
+
+        const response = await fetch(
+          `https://6788e5b22c874e66b7d6c2da.mockapi.io/MiniProject/${id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedData),
+          }
+        );
+
+        const result = await response.json();
+        console.log("Updated item:", result);
 
 
-    document.getElementById("btn").click();
+        document.getElementById("btn").click();
 
-    document.getElementById("display1").innerHTML = `
+        document.getElementById("display1").innerHTML = `
       <p>Data updated successfully</p>
     `;
-  } catch (error) {
-    console.error("Error updating data:", error);
+      } catch (error) {
+        console.error("Error updating data:", error);
 
-    document.getElementById("display1").innerHTML = `
+        document.getElementById("display1").innerHTML = `
       <p>There was an error updating your data</p>
     `;
-  }
-}
+      }
+    }
 
   </script>
 </body>
