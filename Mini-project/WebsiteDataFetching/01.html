@@ -29,6 +29,7 @@
             padding: 20px;
             max-width: 1500px;
             margin: 0 auto;
+            
         }
 
         .product {
@@ -47,6 +48,7 @@
         .product img {
             width: 100%;
             height: auto;
+            padding-top: 15px;
             border-bottom: 1px solid #ddd;
         }
 
@@ -97,6 +99,8 @@
 
     <div id="display"></div>
 
+    
+
     <footer>
         &copy; 2025 Product Fetching | Created by <a href="#">GAIKWAD</a>
     </footer>
@@ -134,10 +138,22 @@
                         <h3>${product.title}</h3>
                         <p class="price">$${product.price}</p>
                         <p>${product.description}</p>
+                        <br>
+                        <div>
+                            <button onclick="addToCart(${product.id})">Add to Cart</button>
+
+                        </div>
                     </div>
                 `;
 
                 display.appendChild(productDiv);
+
+                const addToCartButton = productDiv.querySelector("button");
+                addToCartButton.addEventListener("click", () => {
+                    addToCart(product);
+                });
+
+
             });
         }
 
