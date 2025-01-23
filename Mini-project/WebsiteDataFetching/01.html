@@ -72,39 +72,6 @@
             color: #333;
         }
 
-        .product-content .buttons {
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .product-content button {
-            padding: 10px 15px;
-            font-size: 0.9rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .product-content .delete-btn {
-            background: #ff4d4d;
-            color: white;
-        }
-
-        .product-content .delete-btn:hover {
-            background: #ff1a1a;
-        }
-
-        .product-content .edit-btn {
-            background: #4e54c8;
-            color: white;
-        }
-
-        .product-content .edit-btn:hover {
-            background: #3c42a6;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -139,7 +106,7 @@
         window.onload = async function () {
             const apiUrl = "https://fakestoreapi.com/products";
             try {
-                
+
                 const response = await fetch(apiUrl);
                 const products = await response.json();
 
@@ -152,10 +119,10 @@
             }
         };
 
-        
+
         function displayProducts(products) {
             const display = document.getElementById("display");
-            display.innerHTML = ""; 
+            display.innerHTML = "";
 
             products.forEach((product) => {
                 const productDiv = document.createElement("div");
@@ -168,26 +135,12 @@
                         <p class="price">$${product.price}</p>
                         <p>${product.description}</p>
                     </div>
-                    <div class="buttons">
-                        <button class="delete-btn" onclick="deleteProduct(${product.id})">Delete</button>
-                        <button class="edit-btn" onclick="editProduct(${product.id})">Edit</button>
-                    </div>
                 `;
 
                 display.appendChild(productDiv);
             });
         }
 
-
-        function deleteProduct(productId) {
-            console.log("Delete product with ID:", productId);
-            alert(`Delete functionality for product ID ${productId} not implemented.`);
-        }
-
-        function editProduct(productId) {
-            console.log("Edit product with ID:", productId);
-            alert(`Edit functionality for product ID ${productId} not implemented.`);
-        }
     </script>
 </body>
 
