@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <title>Product Showcase</title>
     <style>
+        /* Old CSS */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -17,7 +19,6 @@
             text-align: center;
             padding: 20px;
             font-size: 2.5rem;
-            background: linear-gradient(90deg, #4e54c8, #8f94fb);
             color: white;
             margin: 0;
         }
@@ -29,7 +30,6 @@
             padding: 20px;
             max-width: 1500px;
             margin: 0 auto;
-            
         }
 
         .product {
@@ -91,38 +91,218 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #4e54c8;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        #main {
+            transition: margin-right .5s;
+            padding: 16px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            margin: 0;
+        }
+
+        /* New CSS for a classic look */
+        .header h1 {
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .sidebar h3 {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            color: #4e54c8;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar ul li button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .sidebar ul li button:hover {
+            background: #c0392b;
+        }
+
+        button {
+            background: #4e54c8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #8f94fb;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background: #c0392b;
+        }
+
+        #total-price {
+            font-weight: bold;
+            text-align: right;
+            margin: 20px;
+            color: #333;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Product Showcase</h1>
+    <div class="header">
+        <div>
+            <h1>Product Showcase</h1>
+        </div>
+        <div>
+            <div id="main">
+                <button class="openbtn" onclick="openNav()"> Cart <i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <div id="cart-items">
+            <h3>Shopping Cart</h3>
+            <p id="total-price">Total: $0</p>
+            <ul id="cart-list"></ul>
+        </div>
+    </div>
 
     <div id="display"></div>
-
-    
 
     <footer>
         &copy; 2025 Product Fetching | Created by <a href="#">GAIKWAD</a>
     </footer>
 
     <script>
+        let cart = [];
+        let total = 0;
+
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
 
         window.onload = async function () {
             const apiUrl = "https://fakestoreapi.com/products";
             try {
-
                 const response = await fetch(apiUrl);
                 const products = await response.json();
-
-                console.log("Fetched Products:", products);
                 displayProducts(products);
-
             } catch (error) {
                 console.error("Error fetching data:", error);
                 document.getElementById("display").innerHTML = "<p>Error fetching data. Please try again later.</p>";
             }
         };
-
 
         function displayProducts(products) {
             const display = document.getElementById("display");
@@ -138,25 +318,47 @@
                         <h3>${product.title}</h3>
                         <p class="price">$${product.price}</p>
                         <p>${product.description}</p>
-                        <br>
-                        <div>
-                            <button onclick="addToCart(${product.id})">Add to Cart</button>
-
-                        </div>
+                        <button onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.image}')">Add to Cart</button>
                     </div>
                 `;
 
                 display.appendChild(productDiv);
-
-                const addToCartButton = productDiv.querySelector("button");
-                addToCartButton.addEventListener("click", () => {
-                    addToCart(product);
-                });
-
-
             });
         }
 
+        function addToCart(id, title, price, image) {
+            cart.push({ id, title, price, image });
+            total += price;
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price;
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById("cart-list");
+            cartList.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement("li");
+                cartItem.className = "cart-item";
+
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="cart-item-details">
+                        <strong>${item.title}</strong> - $${item.price.toFixed(2)}
+                    </div>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+
+                cartList.appendChild(cartItem);
+            });
+
+            document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
+        }
     </script>
 </body>
 

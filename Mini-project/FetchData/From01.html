@@ -208,9 +208,9 @@
         const result = await response.json();
         console.log("result", result);
 
-        document.getElementById("toy").innerHTML = `<p>Data submitted successfully</p>`;
+        document.getElementById("display").innerHTML = `<p>Data submitted successfully</p>`;
       } catch (error) {
-        document.getElementById("toy").innerHTML = `<p>There was an error submitting your data</p>`;
+        document.getElementById("display").innerHTML = `<p>There was an error submitting your data</p>`;
       }
     });
 
