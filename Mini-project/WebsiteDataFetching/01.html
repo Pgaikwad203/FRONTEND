@@ -48,7 +48,7 @@
 
         .product img {
             width: 100%;
-            height: auto;
+            height: 400px;
             padding-top: 15px;
             border-bottom: 1px solid #ddd;
         }
@@ -285,6 +285,10 @@
         let cart = [];
         let total = 0;
 
+        // sessionStorage.setItem("cart", JSON.stringify(cart.values()));
+        // sessionStorage.setItem("total", total);
+
+
         function openNav() {
             document.getElementById("mySidebar").style.width = "300px";
         }
@@ -314,7 +318,7 @@
                 productDiv.className = "product";
 
                 productDiv.innerHTML = `
-                    <img src="${product.image}" alt="${product.title}">
+                    <img src="${product.image}" alt="${product.title} height="200px width="200px">
                     <div class="product-content">
                         <h3>${product.title}</h3>
                         <p class="price">$${product.price}</p>
@@ -326,6 +330,7 @@
                 display.appendChild(productDiv);
             });
         }
+
 
         function addToCart(id, title, price, image) {
             cart.push({ id, title, price, image });
@@ -354,6 +359,9 @@
                     </div>
                     <button onclick="removeFromCart(${index})">Remove</button>
                 `;
+                sessionStorage.setItem("cart", JSON.stringify(cart));
+                sessionStorage.setItem("total", total);
+
 
                 cartList.appendChild(cartItem);
             });
